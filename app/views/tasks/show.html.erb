@@ -1,0 +1,9 @@
+<h1> Task Description ✏️</h1>
+
+<h3><%= @task.title %></h2>
+<p>_________________________</p>
+<p><%= @task.details %></p>
+<p>I have completed this task: <%= @task.completed %></p>
+
+<%= link_to 'Back', tasks_path%>
+<%# <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
