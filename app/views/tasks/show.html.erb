@@ -1,9 +1,13 @@
 <h1> Task Description ✏️</h1>
 
-<h3><%= @task.title %></h2>
 <p>_________________________</p>
+<h3><%= @task.title %></h2>
 <p><%= @task.details %></p>
 <p>I have completed this task: <%= @task.completed %></p>
-
-<%= link_to 'Back', tasks_path%>
-<%# <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+<p>_________________________</p>
+<%= link_to 'Edit', edit_task_path(@task) %>
+<%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+<%= link_to 'Back', task_path %>
